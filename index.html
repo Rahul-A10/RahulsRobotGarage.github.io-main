@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Rahul's Robot Garage</title>
+  <title>Rahul's Garage</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -140,97 +140,124 @@
     
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
+<section id="skills" class="skills section-bg">
+  <div class="container">
 
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p></p>
+    <div class="section-title">
+      <h2>Skills</h2>
+      <p></p>
+    </div>
+
+    <style>
+      .skill-category { margin-bottom: 30px; }
+      .skill-category h5 {
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #149ddd;
+        margin-bottom: 12px;
+        border-left: 3px solid #149ddd;
+        padding-left: 10px;
+      }
+      .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+      .skill-tag {
+        background: #fff;
+        border: 1.5px solid #e0e0e0;
+        border-radius: 4px;
+        padding: 6px 14px;
+        font-size: 13px;
+        color: #272829;
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+      .skill-tag:hover {
+        border-color: #149ddd;
+        color: #149ddd;
+        background: #f0f9ff;
+      }
+      .section-bg .skill-tag { background: #f5f8fd; }
+      .section-bg .skill-tag:hover { background: #e8f4fc; }
+    </style>
+
+    <div class="row" data-aos="fade-up">
+
+      <div class="col-lg-6">
+        <div class="skill-category">
+          <h5>Mechanical Design</h5>
+          <div class="skill-tags">
+            <span class="skill-tag">SolidWorks</span>
+            <span class="skill-tag">CATIA</span>
+            <span class="skill-tag">GD&amp;T (ASME Y14.5)</span>
+            <span class="skill-tag">Tolerance Stack-up</span>
+            <span class="skill-tag">DFM / DFA</span>
+            <span class="skill-tag">Optomechanical Design</span>
+            <span class="skill-tag">Kinematic Mounts</span>
+            <span class="skill-tag">Mechanism Design</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h5>Analysis &amp; Simulation</h5>
+          <div class="skill-tags">
+            <span class="skill-tag">FEA — ANSYS Mechanical</span>
+            <span class="skill-tag">MATLAB</span>
+          </div>
         </div>
 
-        <div class="row skills-content">
-
-          <div class="col-lg-4" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">Solidworks <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            
-
-            <div class="progress">
-              <span class="skill">C++ <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Computer Vision <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
+        <div class="skill-category">
+          <h5>Prototyping &amp; Manufacturing</h5>
+          <div class="skill-tags">
+            <span class="skill-tag">FDM 3D Printing</span>
+            <span class="skill-tag">Resin 3D Printing</span>
+            <span class="skill-tag">CNC Machining</span>
+            <span class="skill-tag">Sheet Metal</span>
+            <span class="skill-tag">Injection Molding</span>
+            <span class="skill-tag">Composite Structures</span>
+            <span class="skill-tag">Laser Cutting</span>
           </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill"> OpenCV<i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Python <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Artificial Intelligence <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-          </div>
-
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-
-            
-
-            <div class="progress">
-              <span class="skill">Rapid Prototyping <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"> DFM, GD&T <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill"> Optomechanics<i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
         </div>
-
       </div>
-    </section><!-- End Skills Section -->
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="skill-category">
+          <h5>Robotics &amp; Mechatronics</h5>
+          <div class="skill-tags">
+            <span class="skill-tag">XYZ Motion Control</span>
+            <span class="skill-tag">Visual Servo Control</span>
+            <span class="skill-tag">Sensor Integration</span>
+            <span class="skill-tag">Electromechanical Integration</span>
+            <span class="skill-tag">Serial Communication (UART)</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h5>Computer Vision &amp; AI</h5>
+          <div class="skill-tags">
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">YOLOv11 / YOLO</span>
+            <span class="skill-tag">ONNX Runtime</span>
+            <span class="skill-tag">Camera Calibration</span>
+            <span class="skill-tag">Homography Transforms</span>
+            <span class="skill-tag">PyTorch</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h5>Software &amp; Tools</h5>
+          <div class="skill-tags">
+            <span class="skill-tag">C++ (Real-Time Control)</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Qt / GUI Development</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">MS Office Suite</span>
+            <span class="skill-tag">Linux / UNIX</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section><!-- End Skills Section -->
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
@@ -240,7 +267,7 @@
           <h2>Resume<a href="https://drive.google.com/file/d/1XkAGEeEz46qf1-mLwf5WrMyPkEGdnirx/view?usp=drive_link" target="_blank" rel="noopener noreferrer" download title="Download Resume">
     <i class="bi bi-download" style="font-size: 1rem; color: #149ddd;"></i>
   </a></h2>
-          <p>3 years of work experience, several accomplishments during my undergraduate studies, and a strong desire to work on research projects. I have a proven track record of collaboratively developing, integrated solutions from initial concept to final, polished deliverable and working on experimental projects.</p>
+          <p>3 years of work experience(Professional + Research), several accomplishments during my undergraduate studies, and a strong desire to work on research projects. I have a proven track record of collaboratively developing, integrated solutions from initial concept to final, polished deliverable and working on experimental projects.</p>
         </div>
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
@@ -258,7 +285,7 @@
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
               <h4>Master in Robotics </h4>
-              <h5>September 2023 - May 2025</h5>
+              <h5>September 2023 - May 2026</h5>
               <p><em>University of Minnesota Twin Cities</em></p>
               <p>GPA: 3.632/4 </p>
             </div>
@@ -276,14 +303,14 @@
               <h5>September 2025–December 2025</h5>
               <p><em>Objective Biotechnology .inc</em></p>
               <ul>
-                <li>Worked on the developing Auto-Beveler (instrument to bevel microneedles) and it's UI to controle different beveling parameters</li>
-                <li>Worked on delevering custom 'Restrained mouse setup' and 'Tredmill for the headfix mouse setup' for neuro-imaging experiments</li>
+                <li>Worked on the developing Auto-Beveler (instrument to bevel microneedles) and it's UI to control different beveling parameters</li>
+                <li>Worked on delivering custom 'Restrained mouse setup' and 'Treadmill for the headfix mouse setup' for neuro-imaging experiments</li>
               
               </ul>
             </div>
             <div class="resume-item">
               <h4>Product Design Engineer</h4>
-              <h5>January 2025–Aplril 2025</h5>
+              <h5>January 2025–April 2025</h5>
               <p><em>Objective Biotechnology .inc</em></p>
               <ul>
                 <li>Designed optical configurations for microscopes and AI-driven embryo detection systems</li>
@@ -306,7 +333,7 @@
               <h5>January 2024–May 2024</h5>
               <p><em>Under guidance of Prof. Jiarong Hong, UMN, Minneapolis</em></p>
               <ul>
-                <li>Working on a projcet to develop complete system for rapid bacteria detection using microflueic chip and computer vision</li>
+                <li>Working on a project to develop complete system for rapid bacteria detection using microflueic chip and computer vision</li>
               </ul>
             </div>
 
@@ -455,7 +482,7 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/Microfluidics printer.png" class="img-fluid" alt="">
-              <li><strong>Microfluedics Channels 3D Printing</strong></li>
+              <li><strong>Microfluidics Channels 3D Printing</strong></li>
               <div class="portfolio-links">
                 <a href="Microfluedics Channels 3D Printing.html" title="More Details"><i class="bx bx-link"></i></a>
               </div>
