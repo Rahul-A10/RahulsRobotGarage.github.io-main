@@ -1,0 +1,136 @@
+/* Shared styles for portfolio project pages (loaded after style.css) */
+
+.nx {
+  --ink: #15191e;
+  --ink-soft: #3d4651;
+  --muted: #6b7682;
+  --wash: #f3f5f7;
+  --line: #dfe3e8;
+  --stage: #14181d;
+  --stage-line: #2a313a;
+  --lamp: #e8a33d;
+  --lamp-deep: #b97a14;
+  font-family: "IBM Plex Sans", "Open Sans", system-ui, sans-serif;
+  color: var(--ink);
+}
+
+.nx .container { max-width: 1080px; }
+
+/* Title block */
+.nx-head { padding: 8px 0 28px; }
+.nx-head h1 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 6px;
+}
+.nx-head .nx-sub { font-size: 1.15rem; color: var(--ink-soft); margin: 0 0 22px; }
+.nx-meta { display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: center; }
+.nx-meta span { color: var(--muted); font-size: .95rem; }
+.nx-meta strong { color: var(--ink); font-weight: 500; }
+.nx-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 16px; border-radius: 6px;
+  background: var(--ink); color: #fff !important;
+  font-size: .95rem; font-weight: 500; text-decoration: none;
+  transition: background .15s;
+}
+.nx-btn:hover { background: var(--lamp-deep); }
+.nx-btn:focus-visible, .nx-ctl button:focus-visible, .nx-tab:focus-visible {
+  outline: 2px solid var(--lamp); outline-offset: 2px;
+}
+
+/* Section headings */
+.nx h2.nx-h {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.35rem; font-weight: 600; letter-spacing: -0.01em;
+  margin: 0 0 14px; padding: 0; color: var(--ink);
+}
+.nx h2.nx-h::after { display: none; }
+
+/* 3D viewer */
+#nx-3d { margin-bottom: 44px; }
+.nx-viewer {
+  position: relative;
+  background: var(--stage);
+  border: 1px solid var(--stage-line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.nx-tabs {
+  display: flex; gap: 2px; padding: 8px 8px 0;
+  background: #191e24; border-bottom: 1px solid var(--stage-line);
+  overflow-x: auto;
+}
+.nx-tab {
+  font: 500 .88rem "IBM Plex Sans", sans-serif;
+  background: transparent; color: #8d98a5;
+  border: 1px solid transparent; border-bottom: 0;
+  border-radius: 6px 6px 0 0; padding: 8px 16px; cursor: pointer;
+  white-space: nowrap; transition: color .15s, background .15s;
+}
+.nx-tab:hover { color: #eef1f4; }
+.nx-tab[aria-selected="true"] {
+  background: var(--stage); color: #eef1f4;
+  border-color: var(--stage-line); box-shadow: inset 0 2px 0 var(--lamp);
+}
+.nx-canvas-wrap { position: relative; height: clamp(340px, 56vh, 560px); cursor: grab; }
+.nx-canvas-wrap:active { cursor: grabbing; }
+.nx-canvas-wrap canvas { display: block; width: 100%; height: 100%; outline: none; }
+.nx-bar {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;
+  padding: 10px 14px; border-top: 1px solid var(--stage-line);
+  background: #191e24; color: #aab4bf;
+}
+.nx-ctl { display: flex; flex-wrap: wrap; gap: 8px; }
+.nx-ctl button {
+  font: 500 .85rem "IBM Plex Sans", sans-serif;
+  background: transparent; color: #d7dde4;
+  border: 1px solid var(--stage-line); border-radius: 6px;
+  padding: 6px 12px; cursor: pointer; transition: border-color .15s, color .15s;
+  margin: 0;
+}
+.nx-ctl button:hover { border-color: var(--lamp); color: #fff; }
+.nx-ctl button[aria-pressed="true"] { border-color: var(--lamp); color: var(--lamp); }
+.nx-readout { font: 400 .8rem "IBM Plex Mono", monospace; align-self: center; color: #8d98a5; }
+.nx-readout b { color: #d7dde4; font-weight: 500; }
+.nx-state {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  padding: 24px; color: #aab4bf; pointer-events: none;
+}
+.nx-state[hidden] { display: none; }
+.nx-state h3 { color: #eef1f4; font-size: 1.1rem; font-weight: 500; margin: 0 0 6px; }
+.nx-state p { max-width: 420px; margin: 0; font-size: .92rem; }
+.nx-state code { color: #aab4bf; }
+.nx-viewer.drag { border-color: var(--lamp); }
+
+/* Gallery */
+.nx .portfolio-details-slider { border: 1px solid var(--line); border-radius: 10px; background: var(--wash); overflow: hidden; }
+.nx .portfolio-details-slider img { width: 100%; max-height: 520px; object-fit: contain; }
+.nx .portfolio-details-slider iframe { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; }
+.nx .swiper-pagination-bullet-active { background: var(--lamp-deep); }
+
+/* Content */
+.nx-body { display: grid; grid-template-columns: 5fr 7fr; gap: 48px; margin-top: 48px; }
+.nx-block + .nx-block { margin-top: 28px; }
+.nx-body p, .nx-body li { color: var(--ink-soft); font-size: 1.02rem; line-height: 1.7; max-width: 68ch; }
+.nx-body p { margin: 0 0 12px; }
+.nx-body p:last-child { margin-bottom: 0; }
+.nx-body ul { list-style: disc; margin: 0; padding-left: 1.2em; }
+.nx-body li { padding-left: 2px; margin-bottom: 6px; }
+.nx-problem { border-left: 3px solid var(--lamp); padding-left: 18px; }
+.nx-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 40px; }
+.nx-tags span {
+  font-size: .88rem; padding: 5px 12px; border-radius: 999px;
+  background: var(--wash); border: 1px solid var(--line); color: var(--ink-soft);
+}
+
+@media (max-width: 800px) {
+  .nx-body { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nx * { transition: none !important; }
+}

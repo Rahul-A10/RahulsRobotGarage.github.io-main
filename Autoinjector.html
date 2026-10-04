@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details </title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>AutoInjector | Rahul Autade</title>
+  <meta content="Agile launch of the commercial Autoinjector product at Objective Biotechnology, Inc.: optical configuration, embryo-detection AI and product design." name="description">
+  <meta content="autoinjector, microscope optics, embryo detection, SolidWorks, GD&amp;T, DFM" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -15,6 +15,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -26,6 +27,19 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Project page styles (shared by all project pages) -->
+  <link href="assets/css/project.css" rel="stylesheet">
+
+  <!-- three.js, used by the STL viewer -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
 
   <!-- =======================================================
   * Template Name: iPortfolio
@@ -46,38 +60,33 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <img src="assets/img/profile-img.jpg" alt="Rahul Autade" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Rahul Autade</a></h1>
         <div class="social-links mt-3 text-center">
-
-
-          <a href="https://github.com/Rahul-A10" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://www.linkedin.com/in/rahul-autade-8911a6162" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://www.bsbrl.org/rahul-autade" target="_blank" class="website"><i class="bx bx-globe"></i></a>
-          <a href="https://www.instagram.com/r_rr_rahul?igsh=ZmpsdjFtdjJuaXFl" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <!--a href="https://leetcode.com/rahulsautade/" class="leetcode"><i class="leetcode"></i></a -->
-          
+          <a href="https://github.com/Rahul-A10" target="_blank" rel="noopener" class="github" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/rahul-autade-8911a6162" target="_blank" rel="noopener" class="linkedin" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.bsbrl.org/rahul-autade" target="_blank" rel="noopener" class="website" aria-label="Lab website"><i class="bx bx-globe"></i></a>
+          <a href="https://www.instagram.com/r_rr_rahul?igsh=ZmpsdjFtdjJuaXFl" target="_blank" rel="noopener" class="instagram" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
         </div>
       </div>
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="index.html#hero" class="nav-link scrollto"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="index.html#portfolio" class="nav-link scrollto active"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
   </header><!-- End Header -->
 
-  <main id="main">
+  <main id="main" class="nx">
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-
         <div class="d-flex justify-content-between align-items-center">
           <h2>Project Details</h2>
           <ol>
@@ -85,64 +94,88 @@
             <li>Project Details</li>
           </ol>
         </div>
-
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
 
-        <div class="row gy-4">
+        <!-- Title -->
+        <div class="nx-head">
+          <h1>AutoInjector</h1>
+          <p class="nx-sub">Objective Biotechnology, Inc.</p>
+          <div class="nx-meta">
+            <span><strong>January 2025 – April 2025</strong></span>
+            <span>Project URL <strong>Private</strong></span>
+          </div>
+        </div>
 
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/image.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Embrio Detection.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Microscope testing.jpg" alt="">
-                </div>
-
+        <!-- Interactive STL viewer. Models are listed in the NX_MODELS script near the bottom of this page. -->
+        <section id="nx-3d">
+          <h2 class="nx-h">Explore the hardware in 3D</h2>
+          <div class="nx-viewer" id="nx-viewer">
+            <div class="nx-canvas-wrap" id="nx-canvas-wrap">
+              <div class="nx-state" id="nx-state">
+                <h3>Loading model…</h3>
+                <p></p>
               </div>
-              <div class="swiper-pagination"></div>
+            </div>
+            <div class="nx-bar">
+              <div class="nx-ctl">
+                <button type="button" id="nx-rotate" aria-pressed="false">Auto-rotate</button>
+                <button type="button" id="nx-wire" aria-pressed="false">Wireframe</button>
+                <button type="button" id="nx-reset">Reset view</button>
+              </div>
+              <div class="nx-readout" id="nx-readout" aria-live="polite"></div>
             </div>
           </div>
+        </section>
 
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>AutoInjector by OBJECTIVE BIOTECHNOLOGY.inc</h3>
+        <!-- Gallery -->
+        <h2 class="nx-h">Gallery</h2>
+        <div class="portfolio-details-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/portfolio/image.jpg" alt="AutoInjector product" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/portfolio/Embrio%20Detection.jpg" alt="Embryo detection" loading="lazy"></div>
+            <div class="swiper-slide"><img src="assets/img/portfolio/Microscope%20testing.jpg" alt="Microscope testing" loading="lazy"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Details -->
+        <div class="nx-body">
+          <div>
+            <div class="nx-block">
+              <h2 class="nx-h">Problem statement</h2>
+              <p class="nx-problem">
+                Agile launch of the commercial Autoinjector product at Objective Biotechnology, Inc.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="nx-block">
+              <h2 class="nx-h">Responsibilities</h2>
               <ul>
-                <li><strong>Problem Statement</strong>: Agile launch of the commercial Autoinjector product at Objective Biotechnology .inc.
-                  </li>
-                <li><strong>Project date</strong>: January 2025 - April 2025</li>
-                <li><strong>Project URL</strong>: <a href=>Private</a></li>
+                <li>Was responsible for microscope optical configuration design.</li>
+                <li>Worked on AI model for embryos detection.</li>
+                <li>Worked on the component placement, structural and exterior design of the Autoinjector, while employing my skills in GD&amp;T, Solidworks and DFM</li>
               </ul>
             </div>
           </div>
-            <div class="portfolio-description">
-              <h2>Responsiblities</h2>
-              <p><li>Was responsible for microscope optical configuration design. </li>
-                <li>Worked on AI model for embryos detection.</li>
-                <li>Worked on the component placement, structural and exterior design of the Autoinjector, while employing my skills in GD&T, Solidworks and DFM</li> </p>
-            </div>
-          </div>
-
         </div>
 
-      
+        <div class="nx-tags" aria-label="Key skills and technologies">
+          <span>Microscope optical design</span>
+          <span>Embryo detection AI</span>
+          <span>SolidWorks</span>
+          <span>GD&amp;T</span>
+          <span>Design for manufacturing (DFM)</span>
+        </div>
+
+      </div>
     </section><!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
-
-
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -159,6 +192,18 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- STL models for this project. One entry = no tabs; several entries = one tab each.
+       Use an empty list [] to hide the 3D section for this project. -->
+  <script>
+    window.NX_MODELS = [
+      {
+        "name": "Autoinjector",
+        "url": "assets/models/autoinjector.stl"
+      }
+    ];
+  </script>
+  <script type="module" src="assets/js/stl-viewer.js"></script>
 
 </body>
 
