@@ -44,7 +44,10 @@ function init() {
   fill.position.set(-3, 1, -2);
   scene.add(key, fill);
 
-  const material = new THREE.MeshStandardMaterial({ color: 0xc9ced6, metalness: 0.35, roughness: 0.45 });
+  scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+  const material = new THREE.MeshStandardMaterial({
+    color: 0xc9ced6, metalness: 0.2, roughness: 0.55, side: THREE.DoubleSide
+  });
   const home = { pos: new THREE.Vector3(), target: new THREE.Vector3() };
   let mesh = null, grid = null;
 
@@ -65,7 +68,10 @@ function init() {
 
   function prepare(geometry) {
     if (geometry.userData.ready) return geometry;
-    if (!geometry.attributes.normal) geometry.computeVertexNormals();
+    // Some CAD exports store empty (0,0,0) normals, which renders solid black,
+    // so always recompute them from the triangles.
+    geometry.deleteAttribute('normal');
+    geometry.computeVertexNormals();
     geometry.computeBoundingBox();
     const size = new THREE.Vector3();
     geometry.boundingBox.getSize(size);
