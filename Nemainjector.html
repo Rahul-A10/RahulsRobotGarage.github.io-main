@@ -431,11 +431,8 @@
       file.arrayBuffer().then(buf => {
         try { showModel(new STLLoader().parse(buf), file.name); }
         catch { stateEl.hidden = false; stateEl.querySelector('h3').textContent = 'Could not read that STL file'; }
-      });
     }
     fileInput.addEventListener('change', e => loadFile(e.target.files[0]));
-    document.querySelector('.nx-drop label').addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); }
     });
     ['dragenter', 'dragover'].forEach(t => viewer.addEventListener(t, e => { e.preventDefault(); viewer.classList.add('drag'); }));
     ['dragleave', 'drop'].forEach(t => viewer.addEventListener(t, e => { e.preventDefault(); viewer.classList.remove('drag'); }));
