@@ -138,7 +138,7 @@ function init() {
       undefined,
       () => {
         if (mine !== token) return;
-        stateTitle.textContent = 'Could not load this model';
+        stateTitle.textContent = 'Coming soon...';
         stateText.innerHTML = `Expected a file at <code></code>`;
         stateText.querySelector('code').textContent = m.url;
       }
