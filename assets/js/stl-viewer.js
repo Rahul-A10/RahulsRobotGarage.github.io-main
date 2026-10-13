@@ -183,8 +183,6 @@ function init() {
       () => {
         if (mine !== token) return;
         stateTitle.textContent = 'Could not load this model';
-        stateText.innerHTML = `Expected a .stl or .glb file at <code></code>`;
-        stateText.querySelector('code').textContent = m.url;
       }
     );
   }
