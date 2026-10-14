@@ -31,16 +31,6 @@
   <!-- Project page styles (shared by all project pages) -->
   <link href="assets/css/project.css" rel="stylesheet">
 
-  <!-- three.js, used by the STL viewer -->
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
-      }
-    }
-  </script>
-
   <!-- =======================================================
   * Template Name: iPortfolio
   * Updated: Nov 17 2023 with Bootstrap v5.3.2
@@ -110,26 +100,6 @@
           </div>
         </div>
 
-        <!-- Interactive STL viewer. Models are listed in the NX_MODELS script near the bottom of this page. -->
-        <section id="nx-3d">
-          <h2 class="nx-h">Explore the hardware in 3D</h2>
-          <div class="nx-viewer" id="nx-viewer">
-            <div class="nx-canvas-wrap" id="nx-canvas-wrap">
-              <div class="nx-state" id="nx-state">
-                <h3>Loading model…</h3>
-                <p></p>
-              </div>
-            </div>
-            <div class="nx-bar">
-              <div class="nx-ctl">
-                <button type="button" id="nx-rotate" aria-pressed="false">Auto-rotate</button>
-                <button type="button" id="nx-wire" aria-pressed="false">Wireframe</button>
-                <button type="button" id="nx-reset">Reset view</button>
-              </div>
-              <div class="nx-readout" id="nx-readout" aria-live="polite"></div>
-            </div>
-          </div>
-        </section>
 
         <!-- Gallery -->
         <h2 class="nx-h">Gallery</h2>
@@ -206,18 +176,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <!-- STL models for this project. One entry = no tabs; several entries = one tab each.
-       Use an empty list [] to hide the 3D section for this project. -->
-  <script>
-    window.NX_MODELS = [
-      {
-        "name": "Printer setup",
-        "url": "assets/models/carbon-fiber-printer.stl"
-      }
-    ];
-  </script>
-  <script type="module" src="assets/js/stl-viewer.js"></script>
 
 </body>
 
